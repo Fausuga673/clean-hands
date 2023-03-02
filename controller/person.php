@@ -8,7 +8,7 @@ if ($_POST) {
         
         $id = $_POST['idarea'];
 
-        $sql = "INSERT INTO `person` (`id`, `name`, `area`) VALUES (NULL, '', '$id')";
+        $sql = "INSERT INTO `person` (`id`, `name`, `area`, 'result') VALUES (NULL, '', '$id', 0)";
         $objConection->ejecutar($sql);
 
         $idperson = "SELECT * FROM person ORDER BY id DESC LIMIT 1; ";
