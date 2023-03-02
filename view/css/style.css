@@ -36,3 +36,7 @@ html, body {
 .focus-off:focus {
     outline: none;
 }
+
+.option {
+    text-transform: lowercase;
+}

@@ -4,7 +4,7 @@ const result = document.getElementById('result')
 function setPercent() {
     let percent = 0
     Object.values(input).forEach(element => {
-        if(element.value == 'si') percent += 100 / input.length
+        if(element.value.toLowerCase() == 'si') percent += 100 / input.length
         result.value = Math.floor(percent)
     });
 }
