@@ -10,7 +10,9 @@ if (isset($_POST['login'])) {
         $password = $_POST['password'];
         $login = $objConection->consultar("SELECT * FROM user WHERE email = '$email' and password = '$password'");
 
-        if (count($login) > 0) header('location: view/list.php');
+        if (count($login) > 0) {
+            ?><script>location = 'view/list.php'</script><?php
+        };
         echo "<script>accessDenied()</script>";
 
     } else {
